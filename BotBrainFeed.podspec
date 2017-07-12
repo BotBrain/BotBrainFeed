@@ -26,16 +26,16 @@ Pod::Spec.new do |s|
   ss.vendored_library = 'BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a'
   end
 
-  s.subspec 'BotBrainFeedCore' do |ss|
-  ss.vendored_frameworks = 'BotBrainFeed/Classes/*.framework'
-  ss.resource = 'BotBrainPods/Assets/*.bundle'
-  ss.libraries = 'z'
-  ss.frameworks = 'WebKit'
-  ss.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
+d
+  s.vendored_frameworks = 'BotBrainFeed/Classes/*.framework'
+  s.resource = 'BotBrainFeed/Assets/*.bundle'
 
-  ss.dependency 'AFNetworking', '~> 3.1.0'
-  ss.dependency 'SDWebImage', '~> 4.0.0'
-  ss.dependency 'BotFireData', '~>0.1.0'
-  end
+  s.dependency 'AFNetworking', '~> 3.1.0'
+  s.dependency 'SDWebImage', '~> 4.0.0'
+  s.dependency 'BotFireData', '~>0.1.0'
+
+  s.frameworks = 'WebKit'
+  s.libraries = 'z'
+  s.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
 
 end

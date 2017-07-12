@@ -22,7 +22,7 @@ pod "BotBrainFeed"
 
 ## Author
 
-zhangzhanzg, zhangzhan@firedata.cc
+zhangzhan, zhangzhan@firedata.cc
 
 ## License
 

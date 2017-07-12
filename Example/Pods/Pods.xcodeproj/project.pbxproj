@@ -116,7 +116,7 @@
 		03F887F6A9A864F97602EA68DC76821A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		041B0C1B00C1AF4DD99F41C5546AC600 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		0A20E0C4ED0525A454451AACE6807FF7 /* Pods-BotBrainFeed_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BotBrainFeed_Example.modulemap"; sourceTree = "<group>"; };
-		0A524F1B767D4B7D07A0D93835192694 /* BotBrainPods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BotBrainPods.framework; path = BotBrainFeed/Classes/BotBrainPods.framework; sourceTree = "<group>"; };
+		14768C3AA17AE80230A6A4DD6E7975F2 /* GDTMobBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
 		19A28EB1AC61C13D651792E1D52282C2 /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
 		1BB0DEFD5B2039B59712BA1E71606526 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		1EC08837C39509BBA2768D9201788EDD /* Pods-BotBrainFeed_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BotBrainFeed_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -139,10 +139,12 @@
 		3E6FCFB109B0D1B50225D6887AF12493 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
 		3EAFC72425AD07B6238D0C06C7F0A1A2 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
 		409AAB429F732E4A4466173F771FB7CD /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
+		444FF3D37BCEE872614738438161BD94 /* BotBrainPods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BotBrainPods.framework; path = BotBrainFeed/Classes/BotBrainPods.framework; sourceTree = "<group>"; };
 		4482FE7783F431635BE023235308142B /* Pods-BotBrainFeed_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BotBrainFeed_Tests-resources.sh"; sourceTree = "<group>"; };
 		44F7BDCFA1BCBE8F2E1BCB8FBA33E1AB /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
 		4DA024300D880912D2FAF748000DD5AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB0677EE3F7FE692C7F83924C6BD77A /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
+		52EC3F27EC62C6F1E7A01093630E6299 /* GDTSplashAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		534B956C009092E692D8EE9F56C8D576 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		54EF7CEA35455D5CF018B6DA54FD4A85 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
 		576E31AA5700662FDACC7D92C69E308E /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		6940A5886A30518105475234DB6DF7E3 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		694530839F132E354215D33EA4D954A7 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		69BD3802A36FEE110C82B32A9C28CBF9 /* Pods-BotBrainFeed_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BotBrainFeed_Tests-dummy.m"; sourceTree = "<group>"; };
+		6CD040B4BE48236DC0E0310E5A96BFCD /* BotBrainSource.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = BotBrainSource.bundle; sourceTree = "<group>"; };
 		6E762429A02F7C3E34BA6764ED4C8895 /* Pods-BotBrainFeed_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BotBrainFeed_Tests.modulemap"; sourceTree = "<group>"; };
 		6F2F67736F1DC4BA88D04546641D2730 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		704C0964CE8A237FDE4342F2474C6B76 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
@@ -172,12 +175,15 @@
 		7AD56E6A064DC9A3F9D6FFC974D99909 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		7C02CB668BE9322713F85E192F44B765 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		7C84D7BE50B51DC16F75113380F3721D /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		7F24BF8C69502E5BC2E0EDF752675C40 /* GDTTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTTrack.h; sourceTree = "<group>"; };
 		8232D78856BB02DA7F3303C864044A75 /* Pods-BotBrainFeed_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BotBrainFeed_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		85AD2182174E638D2CD94598DA928CEC /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		8806F210FAF651F90DA05F1087AB79FF /* Pods_BotBrainFeed_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BotBrainFeed_Example.framework; path = "Pods-BotBrainFeed_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7FFCEC494997EF67726838DD3EBEFD /* GDTMobInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
 		8B6BF3E1A90C6D7817458A94CFBF20E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		90C78F8CA18DF7387EBE0300B2BA40C1 /* Pods-BotBrainFeed_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BotBrainFeed_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93F029A953A342A1859E6A76F24EBEFA /* libGDTMobSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGDTMobSDK.a; path = BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a; sourceTree = "<group>"; };
 		9DF3A9D6582159CA4F98C37F1B3ED85A /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1BF6ACD88F231639A5BB804A6B77E8 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		A0F7DEDE2285D2F6B6EA766C0DDC1929 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
@@ -202,7 +208,6 @@
 		BE9CEB72C71A3AB741E51464B071F65F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		BF58EF49D770459594BCDBDF174202FE /* Pods-BotBrainFeed_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BotBrainFeed_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BFE1F1485E695CB3D93A70ECF18E98E6 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
-		C372C5C40AC069073DB86627C3534B8D /* GDTTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTTrack.h; sourceTree = "<group>"; };
 		C6E11B8782F81F4B3EBECCAD8C255A22 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		C80AD6E8268324AB743A35575E799773 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		C85B45362C2B55BF051DD68D616F7B7D /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
@@ -212,19 +217,15 @@
 		CE5A0D6B69D074A428082476643BEA76 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		D2E552ADBD15C1EF231D09A1F3CC3A8E /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/SDImageCacheConfig.m; sourceTree = "<group>"; };
 		D5FA7DDE172AB960470684BB0E4E0D97 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6E194D3F9D5FA42D3645313A9AF324E /* libGDTMobSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGDTMobSDK.a; path = BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a; sourceTree = "<group>"; };
 		D83E9596842C2B7770321BC35C354755 /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "SDWebImage/NSImage+WebCache.h"; sourceTree = "<group>"; };
 		D93D25BD93ACEF4348A48C28097DA7F1 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		D9C53314EA6C8D5069FF56F56ADE0007 /* GDTNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
-		DBA6BD5DA6FCADB514B133FD902AAE23 /* GDTMobBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
 		DBBB418AFF7BF1B3C05FFF7A58F75515 /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SDWebImage.modulemap; sourceTree = "<group>"; };
 		DF21152D0EF84E16F0B7BABC95412433 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E15188732BEC0E25AF1F63997FF8921E /* GDTMobInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
 		E1AD28FD387DDDC3BD04B5725DAF0E37 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		E26AE745E36A638939745DADF773B092 /* GDTNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
 		E647A0669A216CA016FC8C847461984B /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
 		E6D67DA91D906E39CB78ACA7A65872BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		E79FCF4525894FE3E1F13503212E084F /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
-		E9717F59818E3E45DDA1E65FFC670A73 /* GDTSplashAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		EAC3BD4A280A0297DB1D176F0AA8921F /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
 		EEB942C6124439BFB8C0938C04CB8E9B /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		EEFFD8375D204165B43E02C775B6CCDA /* Pods-BotBrainFeed_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BotBrainFeed_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +293,14 @@
 			path = "Target Support Files/Pods-BotBrainFeed_Tests";
 			sourceTree = "<group>";
 		};
+		05B48DA3E25A2B8E55D9A7A077637CDE /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E15012906566F761374A45A8C3A13A1 /* BotBrainFeed */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		099FB64AC5C26A1B8D435D9F9434A0A6 /* Security */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,15 +331,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1770787E2B3F43341C83D7B87E36F3B7 /* GDTLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				AF9944AC0C40CF78883C25DA38796CFF /* BotBrainFeed */,
-				617F4AAEA9E0FEC7508BC11D78A8B5E6 /* Frameworks */,
-			);
-			name = GDTLibrary;
-			sourceTree = "<group>";
-		};
 		181C8C6855654B48DDB733CD33D61B31 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +356,14 @@
 				20C85A11063EA38FD628258B16E00F37 /* UIWebView+AFNetworking.m */,
 			);
 			name = UIKit;
+			sourceTree = "<group>";
+		};
+		1D2EA5BC76551E144CC933E8B7A4288B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				444FF3D37BCEE872614738438161BD94 /* BotBrainPods.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		212AEE9568CB789E9B38D51BB5BEEAEF /* Targets Support Files */ = {
@@ -387,6 +395,34 @@
 			name = Serialization;
 			sourceTree = "<group>";
 		};
+		3DF1CAC86DB921E95D380D7F9BC4928C /* BotBrainFeed */ = {
+			isa = PBXGroup;
+			children = (
+				FA5ACA97F67B696393AF5CA4EE13A232 /* Classes */,
+			);
+			name = BotBrainFeed;
+			path = BotBrainFeed;
+			sourceTree = "<group>";
+		};
+		3E15012906566F761374A45A8C3A13A1 /* BotBrainFeed */ = {
+			isa = PBXGroup;
+			children = (
+				1D2EA5BC76551E144CC933E8B7A4288B /* Frameworks */,
+				80B9FCFDA7103D38A3532DAB564CF7A7 /* GDTLibrary */,
+				5BEBC1E802A8B7C949C90BE00EC4F8A3 /* Resources */,
+			);
+			name = BotBrainFeed;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3E765D156803CAEB151247D9E7D7B211 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93F029A953A342A1859E6A76F24EBEFA /* libGDTMobSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		42D8607F4FE53226755E0E9A00DCACE2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,12 +433,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		617F4AAEA9E0FEC7508BC11D78A8B5E6 /* Frameworks */ = {
+		5BEBC1E802A8B7C949C90BE00EC4F8A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D6E194D3F9D5FA42D3645313A9AF324E /* libGDTMobSDK.a */,
+				E2C940EAF81E30450B765A74CDB13FCF /* BotBrainFeed */,
 			);
-			name = Frameworks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		64F678A521797915F15E50558DB2C536 /* SDWebImage */ = {
@@ -415,24 +451,25 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		69ED4C8E24EB3405B69B00E56DB522FB /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E97CD73B3572F3924649691662D6BFF1 /* BotBrainFeed */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				69ED4C8E24EB3405B69B00E56DB522FB /* Development Pods */,
+				05B48DA3E25A2B8E55D9A7A077637CDE /* Development Pods */,
 				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
 				42D8607F4FE53226755E0E9A00DCACE2 /* Pods */,
 				AA57B409DC67E27193585484AA7D1428 /* Products */,
 				212AEE9568CB789E9B38D51BB5BEEAEF /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		80B9FCFDA7103D38A3532DAB564CF7A7 /* GDTLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				3DF1CAC86DB921E95D380D7F9BC4928C /* BotBrainFeed */,
+				3E765D156803CAEB151247D9E7D7B211 /* Frameworks */,
+			);
+			name = GDTLibrary;
 			sourceTree = "<group>";
 		};
 		86DA0C839668D449EDA2C7A52317AF84 /* BotFireData */ = {
@@ -442,14 +479,6 @@
 			);
 			name = BotFireData;
 			path = BotFireData;
-			sourceTree = "<group>";
-		};
-		8A8FE1C371138AFB0BF01B40F095B688 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0A524F1B767D4B7D07A0D93835192694 /* BotBrainPods.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A2E4D8FCFF4418E4D6F5BEDFDE3161BF /* Support Files */ = {
@@ -464,6 +493,15 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		A75C3F0C3EEF06B68DA33864786FDB92 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6CD040B4BE48236DC0E0310E5A96BFCD /* BotBrainSource.bundle */,
+			);
+			name = Assets;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		A7D0EA181E7C181997CA44F679AE5B33 /* NSURLSession */ = {
@@ -488,13 +526,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF9944AC0C40CF78883C25DA38796CFF /* BotBrainFeed */ = {
+		AC081B1B539DD74538FD51F6E1B95C03 /* GDTLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				D790D9CB63273F751FE1D1213BF3516D /* Classes */,
+				14768C3AA17AE80230A6A4DD6E7975F2 /* GDTMobBannerView.h */,
+				8A7FFCEC494997EF67726838DD3EBEFD /* GDTMobInterstitial.h */,
+				E26AE745E36A638939745DADF773B092 /* GDTNativeAd.h */,
+				52EC3F27EC62C6F1E7A01093630E6299 /* GDTSplashAd.h */,
+				7F24BF8C69502E5BC2E0EDF752675C40 /* GDTTrack.h */,
 			);
-			name = BotBrainFeed;
-			path = BotBrainFeed;
+			name = GDTLibrary;
+			path = GDTLibrary;
 			sourceTree = "<group>";
 		};
 		BDBA62D65385F7F917840886F671C283 /* AFNetworking */ = {
@@ -534,36 +576,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D790D9CB63273F751FE1D1213BF3516D /* Classes */ = {
+		E2C940EAF81E30450B765A74CDB13FCF /* BotBrainFeed */ = {
 			isa = PBXGroup;
 			children = (
-				E6D19FE44202463F43DA6368BF885B7E /* GDTLibrary */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		E6D19FE44202463F43DA6368BF885B7E /* GDTLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				DBA6BD5DA6FCADB514B133FD902AAE23 /* GDTMobBannerView.h */,
-				E15188732BEC0E25AF1F63997FF8921E /* GDTMobInterstitial.h */,
-				D9C53314EA6C8D5069FF56F56ADE0007 /* GDTNativeAd.h */,
-				E9717F59818E3E45DDA1E65FFC670A73 /* GDTSplashAd.h */,
-				C372C5C40AC069073DB86627C3534B8D /* GDTTrack.h */,
-			);
-			name = GDTLibrary;
-			path = GDTLibrary;
-			sourceTree = "<group>";
-		};
-		E97CD73B3572F3924649691662D6BFF1 /* BotBrainFeed */ = {
-			isa = PBXGroup;
-			children = (
-				F8E03D425E8DFD1C4C9408290B14D226 /* BotBrainFeedCore */,
-				1770787E2B3F43341C83D7B87E36F3B7 /* GDTLibrary */,
+				A75C3F0C3EEF06B68DA33864786FDB92 /* Assets */,
 			);
 			name = BotBrainFeed;
-			path = ../..;
+			path = BotBrainFeed;
 			sourceTree = "<group>";
 		};
 		ED843EB9B1603851685D637F88E830C1 /* Pods-BotBrainFeed_Example */ = {
@@ -584,12 +603,13 @@
 			path = "Target Support Files/Pods-BotBrainFeed_Example";
 			sourceTree = "<group>";
 		};
-		F8E03D425E8DFD1C4C9408290B14D226 /* BotBrainFeedCore */ = {
+		FA5ACA97F67B696393AF5CA4EE13A232 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8A8FE1C371138AFB0BF01B40F095B688 /* Frameworks */,
+				AC081B1B539DD74538FD51F6E1B95C03 /* GDTLibrary */,
 			);
-			name = BotBrainFeedCore;
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		FEC65036E099AF22EF95628FF6F4975A /* Core */ = {
