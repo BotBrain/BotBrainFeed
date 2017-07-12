@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BotBrainFeed'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '布本智能图文SDK'
 
   s.homepage         = 'https://github.com/BotBrain/BotBrainFeed'
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   ss.vendored_library = 'BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a'
   end
 
-d
+
   s.vendored_frameworks = 'BotBrainFeed/Classes/*.framework'
   s.resource = 'BotBrainFeed/Assets/*.bundle'
 
