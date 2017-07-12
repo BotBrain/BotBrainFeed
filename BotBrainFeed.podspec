@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     :text => "      Copyright (c) 2016 BotBrain. All rights reserved.\n"
   }
   s.author           = { 'BotBrain' => 'zhangzhan@firedata.cc' }
-  s.source           = { :git => 'https://github.com/zhangzhanzg/BotBrainFeed.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/BotBrain/BotBrainFeed.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
 
