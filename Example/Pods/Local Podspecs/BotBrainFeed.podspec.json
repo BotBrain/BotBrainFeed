@@ -1,0 +1,49 @@
+{
+  "name": "BotBrainFeed",
+  "version": "0.1.0",
+  "summary": "布本智能图文SDK",
+  "homepage": "https://github.com/BotBrain/BotBrainFeed",
+  "license": {
+    "type": "Copyright",
+    "text": "      Copyright (c) 2016 BotBrain. All rights reserved.\n"
+  },
+  "authors": {
+    "BotBrain": "zhangzhan@firedata.cc"
+  },
+  "source": {
+    "git": "https://github.com/zhangzhanzg/BotBrainFeed.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "GDTLibrary",
+      "source_files": "BotBrainFeed/Classes/GDTLibrary/*.h",
+      "vendored_libraries": "BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a"
+    },
+    {
+      "name": "BotBrainFeedCore",
+      "vendored_frameworks": "BotBrainFeed/Classes/*.framework",
+      "resources": "BotBrainPods/Assets/*.bundle",
+      "libraries": "z",
+      "frameworks": "WebKit",
+      "xcconfig": {
+        "OTHER_LDFLAGS": "-ObjC"
+      },
+      "dependencies": {
+        "AFNetworking": [
+          "~> 3.1.0"
+        ],
+        "SDWebImage": [
+          "~> 4.0.0"
+        ],
+        "BotFireData": [
+          "~>0.1.0"
+        ]
+      }
+    }
+  ]
+}

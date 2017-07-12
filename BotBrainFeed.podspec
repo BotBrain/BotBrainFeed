@@ -9,34 +9,33 @@
 Pod::Spec.new do |s|
   s.name             = 'BotBrainFeed'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BotBrainFeed.'
+  s.summary          = '布本智能图文SDK'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/zhangzhanzg/BotBrainFeed'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zhangzhanzg' => 'zhangzhan@firedata.cc' }
+  s.homepage         = 'https://github.com/BotBrain/BotBrainFeed'
+  s.license = {
+    :type => "Copyright",
+    :text => "      Copyright (c) 2016 BotBrain. All rights reserved.\n"
+  }
+  s.author           = { 'BotBrain' => 'zhangzhan@firedata.cc' }
   s.source           = { :git => 'https://github.com/zhangzhanzg/BotBrainFeed.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '8.0'
+  s.requires_arc = true
 
-  s.source_files = 'BotBrainFeed/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'BotBrainFeed' => ['BotBrainFeed/Assets/*.png']
-  # }
+  s.subspec 'GDTLibrary' do |ss|
+  ss.source_files = 'BotBrainFeed/Classes/GDTLibrary/*.h'
+  ss.vendored_library = 'BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'BotBrainFeedCore' do |ss|
+  ss.vendored_frameworks = 'BotBrainFeed/Classes/*.framework'
+  ss.resource = 'BotBrainPods/Assets/*.bundle'
+  ss.libraries = 'z'
+  ss.frameworks = 'WebKit'
+  ss.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
+
+  ss.dependency 'AFNetworking', '~> 3.1.0'
+  ss.dependency 'SDWebImage', '~> 4.0.0'
+  ss.dependency 'BotFireData', '~>0.1.0'
+  end
+
 end

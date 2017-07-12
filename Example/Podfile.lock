@@ -1,0 +1,45 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - BotBrainFeed (0.1.0):
+    - BotBrainFeed/BotBrainFeedCore (= 0.1.0)
+    - BotBrainFeed/GDTLibrary (= 0.1.0)
+  - BotBrainFeed/BotBrainFeedCore (0.1.0):
+    - AFNetworking (~> 3.1.0)
+    - BotFireData (~> 0.1.0)
+    - SDWebImage (~> 4.0.0)
+  - BotBrainFeed/GDTLibrary (0.1.0)
+  - BotFireData (0.1.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+
+DEPENDENCIES:
+  - BotBrainFeed (from `../`)
+
+EXTERNAL SOURCES:
+  BotBrainFeed:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BotBrainFeed: a04e32876b274b56f5f013a3c172747c6e3dace5
+  BotFireData: 7f9b66eea3fa1a8c0848f4fef0d74c0ef430145a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+
+PODFILE CHECKSUM: a8678a6c80d7095fcdb97c5c47e930ae6b816e2a
+
+COCOAPODS: 1.2.1

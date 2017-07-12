@@ -7,6 +7,7 @@
 //
 
 #import "BOTViewController.h"
+#import <BotBrainPods/BotBrainManager.h>
 
 @interface BOTViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [BotBrainManager startWithAppKey:@"S4EBUTASGJ" appSecret:@"aaa" channelID:@"AppStore"];
+    [[BotBrainManager defaultManager] addBotBrainFeedOnView:self.view inViewController:self];
 }
 
 - (void)didReceiveMemoryWarning
