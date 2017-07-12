@@ -13,28 +13,18 @@
 
 @interface BotBrainManager : NSObject
 
-/** 用户APP ID */
-@property (nonatomic, copy, readonly) NSString *appID __attribute__((deprecated("Please user 'appKey' instead")));
 /** 用户AppKey */
 @property (nonatomic, copy, readonly) NSString *appKey;
-
 /** 用户是否登录 */
 @property (nonatomic, assign, readonly) BOOL isLoggedIn;
 /** 用户登录信息 */
 @property (nonatomic, strong, readonly) BotBrainUserInfoModel *userInfo;
 
-@property (nonatomic, weak, readonly) id <BotBrainFeedDetailDelegate> detailDelegate;
 @property (nonatomic, weak, readonly) id <BotBrainFeedDelegate> feedDelegate;
+@property (nonatomic, weak, readonly) id <BotBrainFeedDetailDelegate> detailDelegate;
 
 + (instancetype)defaultManager;
 
-/**
- 初始化SDK 设置
- @param appKey appSecret
- @param appID  appKey
- @param channel app 渠道
- */
-+ (void)startAppKey:(NSString *)appKey appID:(NSString *)appID channel:(NSString *)channel __attribute__((deprecated("Please user 'startWithAppkey: appSecret: channelID' instead")));
 /**
  初始化SDK
 
@@ -134,8 +124,11 @@
  显示详情页（此方法请在 "+ (BOOL)handleOpenURL:(NSURL *)openURL" 返回YES的情况下调用）
  
  @param URL openURL
- @param controller 用来展示详情页的controller，优先选择push方式
+ @param controller 用来展示详情页的controller，优先选择push方式，可为nil
  */
 - (void)showBotBrainDetaiControllerWithURL:(NSURL *)URL onController:(id)controller;
+
+/** 当前显示的ViewController */
++ (UIViewController *)currentShowViewController;
 
 @end
