@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BotBrainFeed_Example' do
+  pod 'BotBrainFeed', :path => '../'
+
+  target 'BotBrainFeed_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
