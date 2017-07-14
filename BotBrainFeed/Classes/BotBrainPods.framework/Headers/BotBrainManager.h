@@ -1,16 +1,43 @@
 //
-//  TourHeader.h
-//  BuBenTour
+//  BotBrainManager.h
+//  BotBrainManager
 //
 //  Created by BotBrain on 17/4/7.
-//  Copyright © 2017年 Languang. All rights reserved.
+//  Copyright © 2017年 BotBrain. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "BotBrainUserInfoModel.h"
-#import "BotBrainFeedShareModel.h"
 #import "BotBrainFeedDetailDelegate.h"
 
+/// 分享回调模型
+@interface BotBrainFeedShareModel : NSObject
+/** 文章标题 */
+@property (nonatomic, copy) NSString *feedItemTitle;
+/** 文章URL */
+@property (nonatomic, copy) NSString *feedItemURL;
+/** 文章ID */
+@property (nonatomic, copy) NSString *feedItemID;
+/** 分享图片URL */
+@property (nonatomic, copy) NSString *shareImageURL;
+/** 分享、点赞、评论出错信息，为nil，则正常 */
+@property (nonatomic, strong) NSError *error;
+
+@end
+
+/// 用户基本信息，评论时需要调用登录接口传入此信息
+@interface BotBrainUserInfoModel : NSObject
+
+/** 登录用户ID，必填 */
+@property (nonatomic, copy) NSString *userID;
+/** 用户头像URL，选填 */
+@property (nonatomic, copy) NSString *userIcon;
+/** 用户昵称，选填，默认BotBrain */
+@property (nonatomic, copy) NSString *userNickName;
+
+@end
+
+
+/// Feed流管理类
 @interface BotBrainManager : NSObject
 
 /** 用户AppKey */
@@ -19,8 +46,9 @@
 @property (nonatomic, assign, readonly) BOOL isLoggedIn;
 /** 用户登录信息 */
 @property (nonatomic, strong, readonly) BotBrainUserInfoModel *userInfo;
-
+/** Feed流代理 */
 @property (nonatomic, weak, readonly) id <BotBrainFeedDelegate> feedDelegate;
+/** 详情代理 */
 @property (nonatomic, weak, readonly) id <BotBrainFeedDetailDelegate> detailDelegate;
 
 + (instancetype)defaultManager;
@@ -44,11 +72,13 @@
 + (void)setBotBrainLogEnable:(BOOL)enable;
 
 /**
- 显示Feed流Controller，显示前配置相关属性
- UINavigationController push 显示
- UIViewController presentViewController
+ 显示Feed流Controller
 
- @param viewController 当前屏幕显示 主控制器
+ @param viewController 当前显示的 ViewController 或者传入 navigationController
+ 优先选择Push方式，如果无法 push，则选择 模态显示
+ 不建议使用此方法模态展示， 可以使用 “- (void)addBotBrainFeedOnView:(id)view inViewController:(id)viewController”
+ 将Feed流 VC 添加到你自定义的 VC 上面，然后模态出你自定义的 VC
+ 
  @param animated       是否动画  YES/NO
  */
 - (void)showBotBrainFeedOnViewController:(id)viewController animated:(BOOL)animated;

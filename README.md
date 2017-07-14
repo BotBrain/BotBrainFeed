@@ -14,7 +14,7 @@ BotBrainFeed is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "BotBrainFeed", '~> 0.3.0'
+pod "BotBrainFeed", '~> 0.4.0'
 ```
 
 ## Usage
