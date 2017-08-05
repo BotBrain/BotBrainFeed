@@ -1,6 +1,6 @@
 {
   "name": "BotBrainFeed",
-  "version": "0.4.0",
+  "version": "1.2.0",
   "summary": "布本智能图文SDK",
   "homepage": "https://github.com/BotBrain/BotBrainFeed",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/BotBrain/BotBrainFeed.git",
-    "tag": "0.4.0"
+    "tag": "1.2.0"
   },
   "platforms": {
     "ios": "8.0"

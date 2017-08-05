@@ -13,6 +13,8 @@
 @interface BotBrainFeedShareModel : NSObject
 /** 文章标题 */
 @property (nonatomic, copy) NSString *feedItemTitle;
+/** 文章摘要，可能为空 */
+@property (nonatomic, copy) NSString *feedItemSummary;
 /** 文章URL */
 @property (nonatomic, copy) NSString *feedItemURL;
 /** 文章ID */
@@ -157,6 +159,8 @@
  @param controller 用来展示详情页的controller，优先选择push方式，可为nil
  */
 - (void)showBotBrainDetaiControllerWithURL:(NSURL *)URL onController:(id)controller;
+
+- (void)showBotDetailControllerWithItemID:(NSString *)itemID;
 
 /** 当前显示的ViewController */
 + (UIViewController *)currentShowViewController;

@@ -17,24 +17,31 @@
 
 /**
  分享 - 点击分享按钮时
-
+ 
  @param shareModel 当前Model
  */
 - (void)botBrainDidShareWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 /**
  点赞 - 点赞时
-
+ 
  @param shareModel 当前Model
  */
 - (void)botBrainDidLikeWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 /**
- 发布评论 - 点击发布时
+ 发布评论 - 将要回复评论时（可实现此方法来提示用户登录）
  
  @param shareModel 当前Model
  */
 - (void)botBrainWillCommentWithShareModel:(BotBrainFeedShareModel *)shareModel;
+
+/**
+ 发布评论 - 评论发送结束 成功或者失败
+ 
+ @param shareModel 当前Model
+ */
+- (void)botBrainDidCommentWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 
 /**
@@ -76,7 +83,7 @@
 @optional
 /**
  控制左右滑动
-
+ 
  @return 返回YES时禁止左右滑动
  */
 - (BOOL)feedShouldForbidRoll;
@@ -84,10 +91,12 @@
 
 /**
  当没有数据时显示的View
-
+ 
  @param index 当前列表下标，对应栏目，从0开始
  @return UIView
  */
 - (UIView *)viewForNoResultTableViewAtIndex:(NSInteger)index;
+
+- (void)didLoadThemeName:(NSString *)themeName;
 
 @end
