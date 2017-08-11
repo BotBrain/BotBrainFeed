@@ -38,6 +38,10 @@
 
 @end
 
+typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
+    BOTFeedThemeType_Normal,    // 正常模式
+    BOTFeedThemeType_Night,     // 夜间模式
+};
 
 /// Feed流管理类
 @interface BotBrainManager : NSObject
@@ -79,7 +83,7 @@
  @param viewController 当前显示的 ViewController 或者传入 navigationController
  优先选择Push方式，如果无法 push，则选择 模态显示
  不建议使用此方法模态展示， 可以使用 “- (void)addBotBrainFeedOnView:(id)view inViewController:(id)viewController”
- 将Feed流 VC 添加到你自定义的 VC 上面，然后模态出你自定义的 VC
+ 将Feed流 VC 添加到你自定义的 VC 上面，然后模态出你自定义的 VC，方便你定制导航栏
  
  @param animated       是否动画  YES/NO
  */
@@ -145,6 +149,13 @@
  刷新当前展示列表数据
  */
 - (void)reloadCurrentShowFeedListData;
+
+/// 通过禁止竖直方向滑动，可做浏览器拖拽效果（UC浏览器）
+/// NO: 竖直方向Feed流不可滑动，顶部栏目隐藏
+/// YES: 竖直方向Feed流可滑动，顶部栏目显示
+/** 设置Feed流竖直方向可否滑动 */
+- (void)setBotBrainFeedVerticalScrollEnable:(BOOL)enable;
+
 /**
  是否能处理OpenURL
  @param openURL openURL
@@ -161,6 +172,8 @@
 - (void)showBotBrainDetaiControllerWithURL:(NSURL *)URL onController:(id)controller;
 
 - (void)showBotDetailControllerWithItemID:(NSString *)itemID;
+
++ (void)changeFeedThemeForType:(BOTFeedThemeType)type;
 
 /** 当前显示的ViewController */
 + (UIViewController *)currentShowViewController;

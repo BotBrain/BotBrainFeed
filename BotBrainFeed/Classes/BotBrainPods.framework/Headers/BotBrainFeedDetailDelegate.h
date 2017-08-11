@@ -97,6 +97,11 @@
  */
 - (UIView *)viewForNoResultTableViewAtIndex:(NSInteger)index;
 
+/**
+ 动态返回配置的theme name
+
+ @param themeName theme name
+ */
 - (void)didLoadThemeName:(NSString *)themeName;
 
 @end

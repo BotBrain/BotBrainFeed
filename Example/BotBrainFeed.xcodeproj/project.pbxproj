@@ -22,6 +22,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		7FC6F6461F3DA957006FB3AE /* BOTContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6F6451F3DA957006FB3AE /* BOTContentViewController.m */; };
+		7FC6F6491F3DA967006FB3AE /* BOTDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6F6481F3DA967006FB3AE /* BOTDragViewController.m */; };
+		7FC6F64C1F3DAEBC006FB3AE /* BOTDragContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6F64B1F3DAEBC006FB3AE /* BOTDragContentViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		FB3BA15E2333DCFAB5C5BF44 /* Pods_BotBrainFeed_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA8806DDAB1AAA4AF71F47 /* Pods_BotBrainFeed_Example.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,12 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75CD146E88AB2295B9B2C4C5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7FC6F6441F3DA957006FB3AE /* BOTContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTContentViewController.h; sourceTree = "<group>"; };
+		7FC6F6451F3DA957006FB3AE /* BOTContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTContentViewController.m; sourceTree = "<group>"; };
+		7FC6F6471F3DA967006FB3AE /* BOTDragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTDragViewController.h; sourceTree = "<group>"; };
+		7FC6F6481F3DA967006FB3AE /* BOTDragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTDragViewController.m; sourceTree = "<group>"; };
+		7FC6F64A1F3DAEBC006FB3AE /* BOTDragContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTDragContentViewController.h; sourceTree = "<group>"; };
+		7FC6F64B1F3DAEBC006FB3AE /* BOTDragContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTDragContentViewController.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4734D55E91EA6230B378F0A /* Pods_BotBrainFeed_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BotBrainFeed_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4818B693547CC8966D18A9D /* Pods-BotBrainFeed_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotBrainFeed_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BotBrainFeed_Example/Pods-BotBrainFeed_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +146,12 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* BOTViewController.h */,
 				6003F5A6195388D20070C39A /* BOTViewController.m */,
+				7FC6F6441F3DA957006FB3AE /* BOTContentViewController.h */,
+				7FC6F6451F3DA957006FB3AE /* BOTContentViewController.m */,
+				7FC6F6471F3DA967006FB3AE /* BOTDragViewController.h */,
+				7FC6F6481F3DA967006FB3AE /* BOTDragViewController.m */,
+				7FC6F64A1F3DAEBC006FB3AE /* BOTDragContentViewController.h */,
+				7FC6F64B1F3DAEBC006FB3AE /* BOTDragContentViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -397,8 +412,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC6F6461F3DA957006FB3AE /* BOTContentViewController.m in Sources */,
 				6003F59E195388D20070C39A /* BOTAppDelegate.m in Sources */,
+				7FC6F64C1F3DAEBC006FB3AE /* BOTDragContentViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* BOTViewController.m in Sources */,
+				7FC6F6491F3DA967006FB3AE /* BOTDragViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
