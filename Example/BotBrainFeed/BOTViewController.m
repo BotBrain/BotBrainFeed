@@ -35,11 +35,19 @@
 #pragma mark - BotBrainFeedDetailDelegate
 
 /**
- 分享 - 点击分享按钮时
+ 分享 - 点击右上角
  
  @param shareModel 当前Model
  */
 - (void)botBrainDidShareWithShareModel:(BotBrainFeedShareModel *)shareModel {
+    NSLog(@"分享：%@", shareModel);
+}
+/**
+ 分享 - 点击底部分享按钮
+ 
+ @param shareModel 当前Model
+ */
+- (void)botBrainDidTapBottomShareWithShareModel:(BotBrainFeedShareModel *)shareModel {
     NSLog(@"分享：%@", shareModel);
 }
 

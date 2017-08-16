@@ -16,11 +16,17 @@
 @optional
 
 /**
- 分享 - 点击分享按钮时
+ 分享 - 点击详情右上角时
  
  @param shareModel 当前Model
  */
 - (void)botBrainDidShareWithShareModel:(BotBrainFeedShareModel *)shareModel;
+/**
+ 分享 - 点击底部分享按钮时
+ 
+ @param shareModel 当前Model
+ */
+- (void)botBrainDidTapBottomShareWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 /**
  点赞 - 点赞时
