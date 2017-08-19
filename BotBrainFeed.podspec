@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BotBrainFeed'
-  s.version          = '1.2.3'
+  s.version          = '1.2.4'
   s.summary          = '布本智能图文SDK'
 
   s.homepage         = 'https://github.com/BotBrain/BotBrainFeed'
@@ -26,13 +26,12 @@ Pod::Spec.new do |s|
   ss.vendored_library = 'BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a'
   end
 
-
   s.vendored_frameworks = 'BotBrainFeed/Classes/*.framework'
   s.resource = 'BotBrainFeed/Assets/*.bundle'
 
-  s.dependency 'AFNetworking', '~> 3.1.0'
-  s.dependency 'SDWebImage', '~> 4.0.0'
-  s.dependency 'BotFireData', '~>0.1.0'
+  s.dependency 'AFNetworking', '>= 3.0.0'
+  s.dependency 'SDWebImage', '>= 3.7.0'
+  s.dependency 'BotFireData', '>= 0.1.0'
 
   s.frameworks = 'WebKit'
   s.libraries = 'z'

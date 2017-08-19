@@ -4,20 +4,20 @@
 [![License](https://img.shields.io/cocoapods/l/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
 [![Platform](https://img.shields.io/cocoapods/p/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
 
-## Requirements
+## 版本更新
 
-iOS 8.0+ is required.
+####v1.2.4
+1、降低依赖的 `AFNetworking` 和 `SDWebImage` 的版本
+2、优化SDK的性能，提高流畅度
+####v1.2.3
+1、支持夜间模式；
+2、支持浏览器中常见的底部拖拽到顶部交互效果;
+3、详情页代理回调的拆分；
+####v1.2.2
+1、评论支持二级回复；
 
-## Installation
 
-BotBrainFeed is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "BotBrainFeed", '~> 1.2.2'
-```
-
-## Usage
+## SDK使用方法
 
 ### 1、集成准备
 **SDK支持最低版本为8.0。**
@@ -33,13 +33,13 @@ pod "BotBrainFeed", '~> 1.2.2'
 
 然后在选项 `TARGETS--> Build Settings-->Linking-->Other Linker Flags` 添加 `-ObjC` 。
 
-本SDK依赖于常用开源网络库 `AFNetworking` 和图片处理库 `SDWebImage` ， 请您自行导入工程。
+本SDK依赖于常用开源网络库 `AFNetworking` （要求最低版本3.0.0）, 和图片处理库 `SDWebImage` （要求最低版本3.0.0）， 请您自行导入工程。
 
 ##### 1.2.2、CocoaPods集成
 1. 在 `Podfile` 文件中添加：
 
 ```
-pod 'BotBrainFeed', '~>1.2.2'
+pod 'BotBrainFeed', '~>1.2.4'
 ```
 2. 在终端 `cd` 到 `Podfile` 文件所在路径，执行 `pod install`
 
@@ -241,7 +241,7 @@ SDK支持从分享出去的文章详情跳转到App对应的详情页，请提�
 其中，方法 `- showBotBrainDetaiControllerWithURL:onController`中参数 `controller` 是用来展示 `详情ViewController` 的，可以为 `nil` ，为 `nil` 时 `SDK` 会寻找当前显示 `ViewController` 来进行跳转。
 
 
-### 5、注意
+### 5、常见问题
 5.1、 针对 `iOS 9` 及以上系统的限制 `http` 协议的访问，如果 `App` 需要访问 `http://` ， 则需要在 `Info.plist` 添加如下代码:
 
 ```
@@ -258,6 +258,10 @@ SDK支持从分享出去的文章详情跳转到App对应的详情页，请提�
 *** does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target.
 ```
 请到 `Xcode` 项目的 `Build Settings` 标签页搜索 `bitcode` ，将 `Enable Bitcode` 设置为 `NO` 即可。
+
+5.3、共同依赖库版本冲突解决方法
+
+SDK依赖的 `AFNetworking` 和 `SDWebImage` 的版本号已经是比较低的版本，如果还是发生了 `AFNetworking` 和 `SDWebImage` 依赖的版本有冲突，你可以 `fork` 一份代码到你的GitHub中，修改 `BotBrainFeed.podspec` 中依赖库的版本号，然后为SDK指定 `podspec` 源为你的GitHub中的地址。记得同时修改 `BotBrainFeed.podspec` 中 `s.source`。
 
 ## Author
 

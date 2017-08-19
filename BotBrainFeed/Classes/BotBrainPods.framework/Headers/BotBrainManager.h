@@ -133,10 +133,9 @@ typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
 - (void)addFeedDelegate:(id<BotBrainFeedDelegate>)delegate;
 
 /**
- 图文分享成功后请调用此方法。
+ 图文分享成功后请务必调用此方法，不然会影响文章推荐的效果
  */
 - (void)shareBotBrainFeedSuccess;
-
 
 /**
  刷新列表数据
@@ -164,15 +163,25 @@ typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
 + (BOOL)handleOpenURL:(NSURL *)openURL;
 
 /**
- 显示详情页（此方法请在 "+ (BOOL)handleOpenURL:(NSURL *)openURL" 返回YES的情况下调用）
+ 展示详情页（此方法请在 "+ (BOOL)handleOpenURL:(NSURL *)openURL" 返回YES的情况下调用）
  
  @param URL openURL
  @param controller 用来展示详情页的controller，优先选择push方式，可为nil
  */
 - (void)showBotBrainDetaiControllerWithURL:(NSURL *)URL onController:(id)controller;
 
+/**
+ 展示详情页
+
+ @param itemID 文章id
+ */
 - (void)showBotDetailControllerWithItemID:(NSString *)itemID;
 
+/**
+ 切换日间模式和夜间模式
+
+ @param type BOTFeedThemeType
+ */
 + (void)changeFeedThemeForType:(BOTFeedThemeType)type;
 
 /** 当前显示的ViewController */
