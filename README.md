@@ -26,7 +26,17 @@
 
 集成布本智能SDK之前，请您先获取相关的AppKey和AppSecret。
 #### 1.2、项目工程集成配置
-##### 1.2.1、手动集成
+
+##### 1.2.1、CocoaPods集成
+首先在 `Podfile` 文件中添加：
+
+```
+pod 'BotBrainFeed', '~>1.2.4'
+```
+
+然后在终端 `cd` 到 `Podfile` 文件所在路径，执行 `pod install` 。
+
+##### 1.2.2、手动集成
 
 请先 [下载SDK](https://github.com/BotBrain/BotBrainFeed) ，SDK包含 `BotBrainFeed` 下所有文件。
 把SDK直接拖入进工程目录结构中，然后在选项 `TARGETS--> Build Phases-->Link Binary With Libraries` 中添加系统依赖库 `libz.tbd` 、`WebKit.framework`。
@@ -34,14 +44,6 @@
 然后在选项 `TARGETS--> Build Settings-->Linking-->Other Linker Flags` 添加 `-ObjC` 。
 
 本SDK依赖于常用开源网络库 `AFNetworking` （要求最低版本3.0.0）, 和图片处理库 `SDWebImage` （要求最低版本3.0.0）， 请您自行导入工程。
-
-##### 1.2.2、CocoaPods集成
-1. 在 `Podfile` 文件中添加：
-
-```
-pod 'BotBrainFeed', '~>1.2.4'
-```
-2. 在终端 `cd` 到 `Podfile` 文件所在路径，执行 `pod install`
 
 
 ### 2、基本功能集成
@@ -139,7 +141,7 @@ SDK会优先选择Push方式显示ViewController，无法Push的时候会模态�
 - (void)botBrainWillCommentWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 /**
- 发布评论 - 评论发送结束 成功或者失败
+ 发布评论 - 评论发送结束 成功或者失败的回调
  
  @param shareModel 当前Model
  */
@@ -150,7 +152,7 @@ SDK会优先选择Push方式显示ViewController，无法Push的时候会模态�
 其中发布评论时需要登录账号，接入者根据 `BotBrainManager` 类中属性 `isLoggedIn` 来判断当前用户是否已经登录，未登录、评论成功失败都会响应评论的代理方法， `shareModel` 里会返回相应的错误信息。
 
 未登录时提示用户去登录，UI展示效果接入者自己实现，本地不保存用户信息，所以每次APP重新启动时都需要登录。
-
+其中 `userID` 不能为空，其他自行选择传入，如果未传，则为默认。
 登录时代码调用示例如下：
 
 ```
@@ -166,7 +168,7 @@ SDK会优先选择Push方式显示ViewController，无法Push的时候会模态�
     }];
 }
 ```
-其中 `userID` 不能为空，其他自行选择传入，如果未传，则为默认。
+
 
 ### 3、界面定制
 目前提供有限定制，后期会开放更多。
