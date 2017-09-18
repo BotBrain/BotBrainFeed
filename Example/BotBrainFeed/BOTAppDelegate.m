@@ -7,12 +7,19 @@
 //
 
 #import "BOTAppDelegate.h"
+#import <BotBrainPods/BotBrainManager.h>
 
 @implementation BOTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    BotBrainConfig *config = [BotBrainConfig botDefaultConfig];
+    config.appKey = @"S4EBUTASGJ";
+    config.appSecret = @"aaa";
+    config.logEnabled = YES;
+    [BotBrainManager startWithConfigure:config];
+    
     return YES;
 }
 

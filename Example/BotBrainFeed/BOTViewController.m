@@ -12,7 +12,7 @@
 #import "BOTContentViewController.h"
 #import "BOTDragViewController.h"
 
-@interface BOTViewController ()<BotBrainFeedDetailDelegate>
+@interface BOTViewController ()<BotBrainFeedDelegate, BotBrainFeedDetailDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
 
@@ -22,14 +22,80 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [BotBrainManager startWithAppKey:@"S4EBUTASGJ" appSecret:@"aaa" channelID:@"AppStore"];
-    [[BotBrainManager defaultManager] addFeedDetailDelegate:self];
+    
+    [BOTBrainDefaultManager addFeedDelegate:self];
+    [BOTBrainDefaultManager addFeedDetailDelegate:self];
+    // 隐藏栏目
+//    BOTBrainDefaultManagerListConfig.hideColumnView = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+#pragma mark - BotBrainFeedDelegate
+
+// 过滤不显示的栏目
+/*
+ - (NSArray<BotBrainFeedColumnModel *> *)filterFeedListColumnWithOriginArray:(NSArray <BotBrainFeedColumnModel *>*)array {
+ NSMutableArray *tmpArray = [NSMutableArray arrayWithArray:array];
+ [array enumerateObjectsUsingBlock:^(BotBrainFeedColumnModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+ if (idx % 2 == 0) {
+ [tmpArray removeObject:obj];
+ }
+ }];
+ NSLog(@"tmpArray：%@", tmpArray);
+ return [tmpArray copy];
+ }
+ */
+- (void)didLoadFeedColumnssArray:(NSArray <BotBrainFeedColumnModel *>*)columnssArray {
+    NSLog(@"栏目加载成功");
+    NSLog(@"columnssArray：%@", columnssArray);
+}
+
+/// 自定义部分Header
+/*
+- (UIView *)viewForFeedListHeaderAtIndex:(NSInteger)index {
+    if (index % 2 != 0) {
+        return nil;
+    }
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    CGFloat itemHeight = 70;
+    CGFloat minimumLineSpacing = 10;
+    CGFloat sectionToTop = 5;
+    CGFloat sectionToBottom = 5;
+    flowLayout.itemSize = CGSizeMake(50, itemHeight);
+    flowLayout.minimumInteritemSpacing = 30;
+    flowLayout.minimumLineSpacing = minimumLineSpacing;
+    flowLayout.sectionInset = UIEdgeInsetsMake(sectionToTop, 20, sectionToBottom, 20);
+    
+    CGFloat height = itemHeight * 2 + minimumLineSpacing + sectionToTop + sectionToBottom;
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), height) collectionViewLayout:flowLayout];
+    collectionView.backgroundColor = [UIColor orangeColor];
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CollectionCellID"];
+    
+    UIView *emptyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), height)];
+    emptyView.backgroundColor = [UIColor whiteColor];
+    [emptyView addSubview:collectionView];
+    return collectionView;
+}
+*/
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 8;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCellID" forIndexPath:indexPath];
+    cell.contentView.backgroundColor = [UIColor whiteColor];
+    return cell;
 }
 
 #pragma mark - BotBrainFeedDetailDelegate

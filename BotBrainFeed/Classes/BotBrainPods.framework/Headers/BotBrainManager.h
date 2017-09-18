@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BotBrainFeedDetailDelegate.h"
+#import "BotBrainConfig.h"
 
 /// 分享回调模型
 @interface BotBrainFeedShareModel : NSObject
@@ -38,10 +39,25 @@
 
 @end
 
+/// 栏目
+@interface BotBrainFeedColumnModel : NSObject
+/** 栏目名字 */
+@property (nonatomic, copy) NSString *columnName;
+/** 栏目ID */
+@property (nonatomic, copy) NSString *columnID;
+
+@end
+
+/// 主题模式
 typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
     BOTFeedThemeType_Normal,    // 正常模式
     BOTFeedThemeType_Night,     // 夜间模式
 };
+
+#define BOTBrainDefaultManager [BotBrainManager defaultManager]
+#define BOTBrainDefaultManagerConfig [BotBrainManager defaultManager].configure
+#define BOTBrainDefaultManagerListConfig [BotBrainManager defaultManager].configure.feedListConfig
+#define BOTBrainDefaultManagerDetailConfig [BotBrainManager defaultManager].configure.feedDetailConfig
 
 /// Feed流管理类
 @interface BotBrainManager : NSObject
@@ -57,11 +73,20 @@ typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
 /** 详情代理 */
 @property (nonatomic, weak, readonly) id <BotBrainFeedDetailDelegate> detailDelegate;
 
+@property (nonatomic, strong, readonly) BotBrainConfig *configure;
+
 + (instancetype)defaultManager;
 
 /**
- 初始化SDK
+ 是否输出Log，默认NO
+ (建议使用 " configure "配置，后期会弃用此方法)
+ @param enable YES or NO
+ */
++ (void)setBotBrainLogEnable:(BOOL)enable;
 
+/**
+ 初始化。SDK (建议使用 " startWithConfigure: "，后期会弃用此方法)
+ 
  @param appKey 用户AppKey
  @param appSecret 用户AppSecret
  @param channelID App渠道，默认AppStore
@@ -69,18 +94,17 @@ typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
 + (void)startWithAppKey:(NSString *)appKey
               appSecret:(NSString *)appSecret
               channelID:(NSString *)channelID;
-
 /**
- 是否输出Log，默认NO
+ 初始化SDK
 
- @param enable YES or NO
+ @param configure 初始化配置
  */
-+ (void)setBotBrainLogEnable:(BOOL)enable;
++ (void)startWithConfigure:(BotBrainConfig *)configure;
 
 /**
  显示Feed流Controller
 
- @param viewController 当前显示的 ViewController 或者传入 navigationController
+ @param viewController 当前显示的 ViewController 或者传入 ViewController所属的navigationController
  优先选择Push方式，如果无法 push，则选择 模态显示
  不建议使用此方法模态展示， 可以使用 “- (void)addBotBrainFeedOnView:(id)view inViewController:(id)viewController”
  将Feed流 VC 添加到你自定义的 VC 上面，然后模态出你自定义的 VC，方便你定制导航栏
@@ -138,7 +162,7 @@ typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
 - (void)shareBotBrainFeedSuccess;
 
 /**
- 刷新列表数据
+ 刷新列表数据(下标根据栏目数组确定)
 
  @param index 要刷新栏目的下标，从0开始。
  */

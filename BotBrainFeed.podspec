@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BotBrainFeed'
-  s.version          = '1.2.4'
+  s.version          = '1.2.5'
   s.summary          = '布本智能图文SDK'
 
   s.homepage         = 'https://github.com/BotBrain/BotBrainFeed'
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'AFNetworking', '>= 3.0.0'
   s.dependency 'SDWebImage', '>= 3.7.0'
-  s.dependency 'BotFireData', '>= 0.1.0'
+  s.dependency 'BotFireData', '>= 0.2.1'
 
   s.frameworks = 'WebKit'
   s.libraries = 'z'

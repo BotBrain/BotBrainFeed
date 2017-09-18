@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIView.h>
 
+@class BotBrainFeedColumnModel;
 @class BotBrainFeedShareModel;
 
 @protocol BotBrainFeedDetailDelegate <NSObject>
@@ -55,7 +56,7 @@
  
  @return NSString or UIImage
  */
-- (id)objectForFeedDetailRightBarButtonItem;
+- (id)objectForFeedDetailRightBarButtonItem DEPRECATED_MSG_ATTRIBUTE("Use BotBrainConfig feedDetailConfig detailRightItemContent");
 
 
 /**
@@ -64,7 +65,7 @@
  
  @return NSString or UIImage
  */
-- (id)objectForFeedDetailLeftBarButtonItem;
+- (id)objectForFeedDetailLeftBarButtonItem DEPRECATED_MSG_ATTRIBUTE("Use BotBrainConfig feedDetailConfig detailLeftItemContent");;
 /**
  注意：此设置仅在以view方式添加图文列表，并且详情页以模态展示时有效
  详情NavigationBar背景色默认 whiteColor
@@ -92,7 +93,7 @@
  
  @return 返回YES时禁止左右滑动
  */
-- (BOOL)feedShouldForbidRoll;
+- (BOOL)feedShouldForbidRoll DEPRECATED_MSG_ATTRIBUTE("Use BotBrainConfig feedListConfig forbidHorizontalScroll");
 
 
 /**
@@ -109,5 +110,28 @@
  @param themeName theme name
  */
 - (void)didLoadThemeName:(NSString *)themeName;
+
+/**
+ 宿主自定义的view，会被作为header的一部分，插入在搜索或者Banner和Feed之间。
+ 自定View的时候请设置view的frame。
+ @param index 栏目下标，针对不同的栏目可定义不同的Header
+ @return UIView
+ */
+- (UIView *)viewForFeedListHeaderAtIndex:(NSInteger)index;
+
+/**
+ 栏目加载成功的回调
+
+ @param columnssArray 栏目数据
+ */
+- (void)didLoadFeedColumnssArray:(NSArray <BotBrainFeedColumnModel *>*)columnssArray;
+
+/**
+ 宿主可自定义显示部分栏目
+
+ @param array 原始栏目数组
+ @return 返回过滤后的栏目数组
+ */
+- (NSArray<BotBrainFeedColumnModel *> *)filterFeedListColumnWithOriginArray:(NSArray <BotBrainFeedColumnModel *>*)array;
 
 @end

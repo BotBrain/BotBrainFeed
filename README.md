@@ -6,19 +6,27 @@
 
 ## 版本更新
 
+#### v1.2.5
+
+1. 支持栏目过滤，栏目隐藏；
+2. 支持Feed流Header的部分定制；
+3. 支持后台新样式的配置；
+4. 优化了Feed流的数据展示效果；
+
 #### v1.2.4
 
-1、降低依赖的 `AFNetworking` 和 `SDWebImage` 的版本
-2、优化SDK的性能，提高流畅度
+1、降低依赖的 `AFNetworking` 和 `SDWebImage` 的版本；
+2、优化SDK的性能，提高流畅度；
+
 #### v1.2.3
 
-1、支持夜间模式；
-2、支持浏览器中常见的底部拖拽到顶部交互效果;
-3、详情页代理回调的拆分；
+1. 支持夜间模式；
+2. 支持浏览器中常见的底部拖拽到顶部交互效果；
+3. 详情页代理回调的拆分；
+
 #### v1.2.2
 
-1、评论支持二级回复；
-
+1. 评论支持二级回复；
 
 ## SDK使用方法
 
@@ -46,13 +54,31 @@ pod 'BotBrainFeed', '~>1.2.4'
 
 然后在选项 `TARGETS--> Build Settings-->Linking-->Other Linker Flags` 添加 `-ObjC` 。
 
-本SDK依赖于常用开源网络库 `AFNetworking` （要求最低版本3.0.0）, 和图片处理库 `SDWebImage` （要求最低版本3.0.0）， 请您自行导入工程。
+本SDK依赖于常用开源网络库 `AFNetworking` （要求最低版本3.0.0）, 和图片处理库 `SDWebImage` （要求最低版本3.7.0）， 请您自行导入工程。
 
 
 ### 2、基本功能集成
 #### 2.1、配置 `AppDelegate.m`
 
 导入头文件 `#import "BotBrainManager.h"`
+
+在 `AppDelegate.m` 配置相关信息：
+
+```
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 通过此方法初始化SDK，替换成自己的相关信息
+    BotBrainConfig *config = [BotBrainConfig botDefaultConfig];
+    config.appKey = @"S4EBUTASGJ";
+    config.appSecret = @"aaa";
+    config.logEnabled = YES;
+    [BotBrainManager startWithConfigure:config];
+    
+    return YES;
+}
+```
+
+或者使用下面的方法
 
 `AppDelegate.m` 的配置主要是填写 `Appkey` 和 `AppSecret` 以及渠道标识 `channel` ，channel默认为“AppStore”。
 代码示例如下:
@@ -73,6 +99,7 @@ pod 'BotBrainFeed', '~>1.2.4'
 [BotBrainManager setBotBrainLogEnable:YES];
 ```
 请先于初始化SDK调用此方法开启 `Debug` 模式
+
 
 
 #### 2.2、展示图文列表
@@ -177,19 +204,23 @@ SDK会优先选择Push方式显示ViewController，无法Push的时候会模态�
 目前提供有限定制，后期会开放更多。
 
 #### 3.1、针对图文列表的定制：
-图文列表相关的定制通过代理 `BotBrainFeedDelegate` 来实现。
+图文列表相关的定制通过代理 `BotBrainFeedDelegate` 和 `BotBrainFeedListConfig` 来实现。
 
-##### 3.1.1、列表左右滑动功能
-通过实现方法 `- (BOOL)feedShouldForbidRoll;` 来控制是否禁止图文列表左右滑动切换的功能。
+##### 3.1.1、列表相关
 
-代码示例如下：
+可控制列表是否可以左右切换
 
 ```
-- (BOOL)feedShouldForbidRoll {
-    return YES;
-}
+BOTBrainDefaultManagerListConfig.forbidHorizontalScroll = YES;
 ```
-返回YES则禁止左右滑动，不实现此方法或者返回NO不禁止。
+
+可隐藏和显示栏目
+
+```
+BOTBrainDefaultManagerListConfig.hideColumnView = YES;
+```
+
+注意：使用上述方法需使用 ` startWithConfigure: ` 方法初始化。
 
 ##### 3.1.2、图文列表无结果时展示View
 
