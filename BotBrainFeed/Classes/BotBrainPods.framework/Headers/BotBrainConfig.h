@@ -42,6 +42,8 @@
 @property (nonatomic, assign) BOOL hideColumnView;
 /** 是否禁止左右滑动切换不同的栏目，默认NO */
 @property (nonatomic, assign) BOOL forbidHorizontalScroll;
+/** Feed流顶部Banner的高度，默认200，后台配置才会显示Banner */
+@property (nonatomic, assign) CGFloat bannerHeight;
 
 @end
 
