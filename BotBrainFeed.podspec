@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BotBrainFeed'
-  s.version          = '1.2.7'
+  s.version          = '1.2.8'
   s.summary          = '布本智能图文SDK'
 
   s.homepage         = 'https://github.com/BotBrain/BotBrainFeed'

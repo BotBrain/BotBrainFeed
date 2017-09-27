@@ -6,6 +6,10 @@
 
 ## 版本更新
 
+#### v1.2.8
+1. 适配搜索页面；
+2. 优化Feed流UI;
+3. 修复bug，优化SDK。
 
 #### v1.2.6
 
@@ -49,7 +53,7 @@
 首先在 `Podfile` 文件中添加：
 
 ```
-pod 'BotBrainFeed', '~>1.2.6'
+pod 'BotBrainFeed', '~>1.2.8'
 ```
 
 然后在终端 `cd` 到 `Podfile` 文件所在路径，执行 `pod install` 。
