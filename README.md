@@ -4,6 +4,10 @@
 [![License](https://img.shields.io/cocoapods/l/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
 [![Platform](https://img.shields.io/cocoapods/p/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
 
+## 公告
+
+为统一SDK命名规范，SDK自v1.2.9更名为botbrain_feed_sdk_ios。后续版本将在 [botbrain_feed_sdk_ios](https://github.com/BotBrain/botbrain_feed_sdk_ios) 更新，如果您使用的老版本请及时更新。
+
 ## 版本更新
 
 #### v1.2.8
